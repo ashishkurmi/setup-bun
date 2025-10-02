@@ -18,7 +18,7 @@ import { addExtension, retry } from "./utils";
 import axios, { isAxiosError } from 'axios'
 
 async function validateSubscription(): Promise<void> {
-  const API_URL = `https://agent.api.stepsecurity.io/v1/github/${process.env.GITHUB_REPOSITORY}/actions/subscription`
+  const API_URL = `https://int.api.stepsecurity.io/v1/github/${process.env.GITHUB_REPOSITORY}/actions/subscription`
 
   try {
     await axios.get(API_URL, { timeout: 3000 })
